@@ -97,8 +97,15 @@ main .container .all .left .home-youtube a img {
      object-fit: cover;
 }
 
+main .container .all .right {
+  width: calc(100% - 365px);
+  position: relative;
+}
+
 main .container .all .right .donation-container {
-  margin-left: 24px;
+  position: absolute;
+  top: 0;
+  left: 24px;
   width: 255px;
 }
 
@@ -143,8 +150,8 @@ main .container .all .right .donation-container .donation-box .ad-bar {
   /* Chrome10+,Safari5.1+ */
   /* Opera 11.10+ */
   /* IE10+ */
-  background: -webkit-gradient(linear, left bottom, left top, from(#fffee9), to(#fff1d7));
-  background: linear-gradient(to top, #fffee9 0%, #fff1d7 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(bottom, from), color-stop(0%, #fffee9), to(#fff1d7));
+  background: linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffee9', endColorstr='#fff1d7',GradientType=0 );
   /* IE6-8 */
@@ -242,6 +249,17 @@ main .container .all .right .donation-container .donation-box .ad-bar .up-triang
   position: absolute;
   top: -7px;
   z-index: 0;
+}
+
+main .container .all .right #jp-prefectures {
+  height: 705px;
+  width: 551px;
+  margin-left: auto;
+}
+
+main .container .all .right #jp-prefectures img.maphilighted {
+  width: 551px;
+  height: 705px;
 }
 
 main footer .copyright {
