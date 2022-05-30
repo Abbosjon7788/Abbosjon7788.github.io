@@ -22,8 +22,6 @@ a {
   color: #0045c6;
   text-decoration: none;
   outline: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .sprite,
@@ -34,12 +32,26 @@ a {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
   max-width: 955px;
   margin: 0 auto;
 }
 
 main .container {
-  padding-top: 10px;
+  padding: 10px 0;
 }
 
 main .container .all {
@@ -98,6 +110,9 @@ main .container .all .left .home-youtube a img {
 }
 
 main .container .all .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: calc(100% - 365px);
   position: relative;
 }
@@ -107,6 +122,7 @@ main .container .all .right .donation-container {
   top: 0;
   left: 24px;
   width: 255px;
+  z-index: 10;
 }
 
 main .container .all .right .donation-container .donation-box .newadd-link {
@@ -255,11 +271,490 @@ main .container .all .right #jp-prefectures {
   height: 705px;
   width: 551px;
   margin-left: auto;
+  position: relative;
 }
 
 main .container .all .right #jp-prefectures img.maphilighted {
   width: 551px;
   height: 705px;
+}
+
+main .container .all .right #jp-prefectures .mp-1 {
+  position: absolute;
+}
+
+main .container .all .right #jp-prefectures .mp-2 {
+  position: absolute;
+}
+
+main .container .all .right #jp-prefectures .mp-3 {
+  position: absolute;
+}
+
+main .container .all .right #jp-prefectures .active-video {
+  opacity: 100;
+}
+
+main .container .all .right #jp-prefectures .video-1-1 {
+  left: 282px;
+  top: 40px;
+}
+
+main .container .all .right #jp-prefectures .video-2-1 {
+  left: 450px;
+  top: 270px;
+}
+
+main .container .all .right #jp-prefectures .video-2-2 {
+  left: 780px;
+  top: 295px;
+}
+
+main .container .all .right #jp-prefectures .video-2-3 {
+  left: 755px;
+  top: 320px;
+}
+
+main .container .all .right #jp-prefectures .video-2-4 {
+  left: 857px;
+  top: 289px;
+}
+
+main .container .all .right #jp-prefectures .video-2-5 {
+  left: 832px;
+  top: 313px;
+}
+
+main .container .all .right #jp-prefectures .video-2-6 {
+  left: 807px;
+  top: 338px;
+}
+
+main .container .all .right #jp-prefectures .video-3-1 {
+  left: 410px;
+  top: 410px;
+}
+
+main .container .all .right #jp-prefectures .video-3-2 {
+  left: 395px;
+  top: 435px;
+}
+
+main .container .all .right #jp-prefectures .video-3-3 {
+  left: 370px;
+  top: 460px;
+}
+
+main .container .all .right #jp-prefectures .video-3-4 {
+  left: 472px;
+  top: 427px;
+}
+
+main .container .all .right #jp-prefectures .video-3-5 {
+  left: 447px;
+  top: 452px;
+}
+
+main .container .all .right #jp-prefectures .video-3-6 {
+  left: 422px;
+  top: 477px;
+}
+
+main .container .all .right #jp-prefectures .video-3-7 {
+  left: 397px;
+  top: 502px;
+}
+
+main .container .all .right #jp-prefectures .video-4-1 {
+  left: 240px;
+  top: 272px;
+}
+
+main .container .all .right #jp-prefectures .video-4-2 {
+  left: 215px;
+  top: 297px;
+}
+
+main .container .all .right #jp-prefectures .video-4-3 {
+  left: 190px;
+  top: 322px;
+}
+
+main .container .all .right #jp-prefectures .video-4-4 {
+  left: 527px;
+  top: 347px;
+}
+
+main .container .all .right #jp-prefectures .video-4-5 {
+  left: 502px;
+  top: 372px;
+}
+
+main .container .all .right #jp-prefectures .video-4-6 {
+  left: 550px;
+  top: 255px;
+}
+
+main .container .all .right #jp-prefectures .video-4-7 {
+  left: 525px;
+  top: 280px;
+}
+
+main .container .all .right #jp-prefectures .video-4-8 {
+  left: 500px;
+  top: 305px;
+}
+
+main .container .all .right #jp-prefectures .video-4-9 {
+  left: 475px;
+  top: 330px;
+}
+
+main .container .all .right #jp-prefectures .video-5-1 {
+  left: 275px;
+  top: 500px;
+}
+
+main .container .all .right #jp-prefectures .video-5-2 {
+  left: 250px;
+  top: 525px;
+}
+
+main .container .all .right #jp-prefectures .video-5-3 {
+  left: 225px;
+  top: 550px;
+}
+
+main .container .all .right #jp-prefectures .video-5-4 {
+  left: 327px;
+  top: 517px;
+}
+
+main .container .all .right #jp-prefectures .video-5-5 {
+  left: 302px;
+  top: 542px;
+}
+
+main .container .all .right #jp-prefectures .video-5-6 {
+  left: 277px;
+  top: 567px;
+}
+
+main .container .all .right #jp-prefectures .video-5-7 {
+  left: 255px;
+  top: 592px;
+}
+
+main .container .all .right #jp-prefectures .video-6-1 {
+  left: 55px;
+  top: 410px;
+}
+
+main .container .all .right #jp-prefectures .video-6-2 {
+  left: 395px;
+  top: 435px;
+}
+
+main .container .all .right #jp-prefectures .video-6-3 {
+  left: 393px;
+  top: 365px;
+}
+
+main .container .all .right #jp-prefectures .video-6-4 {
+  left: 368px;
+  top: 390px;
+}
+
+main .container .all .right #jp-prefectures .video-6-5 {
+  left: 343px;
+  top: 415px;
+}
+
+main .container .all .right #jp-prefectures .video-7-1 {
+  left: 155px;
+  top: 565px;
+}
+
+main .container .all .right #jp-prefectures .video-7-2 {
+  left: 130px;
+  top: 590px;
+}
+
+main .container .all .right #jp-prefectures .video-7-3 {
+  left: 182px;
+  top: 610px;
+}
+
+main .container .all .right #jp-prefectures .video-7-4 {
+  left: 157px;
+  top: 635px;
+}
+
+main .container .all .right #jp-prefectures .video-8-1 {
+  left: -55px;
+  top: 500px;
+}
+
+main .container .all .right #jp-prefectures .video-8-2 {
+  left: -80px;
+  top: 525px;
+}
+
+main .container .all .right #jp-prefectures .video-8-3 {
+  left: -105px;
+  top: 550px;
+}
+
+main .container .all .right #jp-prefectures .video-8-4 {
+  left: -83px;
+  top: 457px;
+}
+
+main .container .all .right #jp-prefectures .video-8-5 {
+  left: 263px;
+  top: 482px;
+}
+
+main .container .all .right #jp-prefectures .video-8-6 {
+  left: 238px;
+  top: 507px;
+}
+
+main .container .all .right #jp-prefectures .video-8-7 {
+  left: 213px;
+  top: 532px;
+}
+
+main .container .all .right #jp-prefectures .video-9-1 {
+  left: -65px;
+  top: 690px;
+}
+
+main .container .all .right #jp-prefectures .speech-bubble {
+  background: none repeat scroll 0 0 #000000;
+  border-radius: 5px 5px 5px 5px;
+  height: 30px;
+  padding: 3px 2px;
+  position: relative;
+  width: 43px;
+}
+
+main .container .all .right #jp-prefectures .speech-bubble .down-bubble {
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 8px solid #000000;
+  bottom: -6px;
+  height: 0;
+  left: 27px;
+  position: absolute;
+  width: 0;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-45deg);
+  /* Safari and Chrome */
+  -o-transform: rotate(-45deg);
+  /* Opera */
+}
+
+main .container .all .right #jp-prefectures .speech-bubble .up-right {
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 8px solid #000000;
+  height: 0;
+  left: 27px;
+  position: absolute;
+  top: -6px;
+  width: 0;
+  transform: rotate(-140deg);
+  -moz-transform: rotate(-140deg);
+  -ms-transform: rotate(-140deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-140deg);
+  /* Safari and Chrome */
+  -o-transform: rotate(-140deg);
+  /* Opera */
+}
+
+main .container .all .right #jp-prefectures .speech-bubble .up-left {
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 8px solid #000000;
+  height: 0;
+  left: 12px;
+  position: absolute;
+  top: -6px;
+  width: 0;
+  transform: rotate(-220deg);
+  -moz-transform: rotate(-220deg);
+  -ms-transform: rotate(-220deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-220deg);
+  /* Safari and Chrome */
+  -o-transform: rotate(-220deg);
+  /* Opera */
+}
+
+main .container .all .right .prefectures {
+  float: right;
+  font-size: 12px;
+  line-height: 16px;
+  list-style-type: none;
+  text-align: right;
+  z-index: 5;
+}
+
+main .container .all .right .prefectures a {
+  text-decoration: none;
+}
+
+main .container .all .right .prefectures a:hover {
+  text-decoration: underline;
+}
+
+main .container #draggable {
+  cursor: move;
+  z-index: 100;
+  position: relative;
+}
+
+main .container #draggable .dog-note {
+  position: absolute;
+  bottom: 250px;
+}
+
+main .container #draggable .dog-note .note-bubble {
+  left: -80px;
+  position: absolute;
+  top: 60px;
+  width: 230px;
+}
+
+main .container #draggable .dog-note .note-bubble .bubble-text {
+  height: 116px;
+  padding: 28px 0px 10px;
+  position: relative;
+  text-align: center;
+  width: 230px;
+  background: url("https://statics.iyocdn.com/ja/img/sprite.png") -191px -247px;
+  z-index: 4;
+}
+
+main .container #draggable .dog-note .note-bubble .btn-cancel {
+  background: url("https://statics.iyocdn.com/ja/img/sprite.png") -269px -72px;
+  cursor: pointer;
+  display: block;
+  height: 23px;
+  position: absolute;
+  right: 17px;
+  top: 8px;
+  width: 23px;
+  z-index: 5;
+}
+
+main .container #draggable .dog-note .note-bubble .btn-cancel:hover {
+  background: url("https://statics.iyocdn.com/ja/img/sprite.png") -310px -72px;
+  cursor: pointer;
+  display: block;
+  height: 23px;
+  position: absolute;
+  right: 17px;
+  top: 8px;
+  width: 23px;
+}
+
+main .container #draggable .dog-note .dog {
+  float: left;
+  left: 75px;
+  position: relative;
+  top: 150px;
+  width: 173px;
+}
+
+main .container #draggable .dog-note .dog .dog-head {
+  background: url(https://statics.iyocdn.com/ja/img/sprite.png) no-repeat scroll -472px -217px;
+  height: 105px;
+  width: 103px;
+  z-index: 10;
+  position: absolute;
+  animation-name: myfirst;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  /* Firefox: */
+  -moz-animation-name: myfirst;
+  -moz-animation-duration: 0.3s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -moz-animation-play-state: running;
+  /* Safari and Chrome: */
+  -webkit-animation-name: myfirst;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  /* Opera: */
+  -o-animation-name: myfirst;
+  -o-animation-duration: 0.3s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+  -o-animation-play-state: running;
+}
+
+main .container #draggable .dog-note .dog .dog-body {
+  background: url("https://statics.iyocdn.com/ja/img/sprite.png") -90px 0;
+  height: 97px;
+  left: 25px;
+  position: absolute;
+  top: 28px;
+  width: 169px;
+  z-index: 8;
+}
+
+main .container #draggable .dog-note .dog .dog-tail {
+  background: url("https://statics.iyocdn.com/ja/img/sprite.png") -270px 0;
+  float: right;
+  height: 42px;
+  margin: 10px 0 0;
+  width: 51px;
+  z-index: 6;
+  animation-name: mytail;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  /* Firefox: */
+  -moz-animation-name: mytail;
+  -moz-animation-duration: 0.3s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -moz-animation-play-state: running;
+  /* Safari and Chrome: */
+  -webkit-animation-name: mytail;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+
+main footer {
+  width: 100%;
 }
 
 main footer .copyright {
@@ -314,5 +809,87 @@ main footer .copyright a {
 
 main footer .copyright a:hover {
   text-decoration: underline;
+}
+
+@keyframes myfirst {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 1px;
+  }
+  50% {
+    left: 0px;
+    top: 2px;
+  }
+  75% {
+    left: 0px;
+    top: 3px;
+  }
+  100% {
+    left: 0px;
+    top: 4px;
+  }
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */ {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 1px;
+  }
+  50% {
+    left: 0px;
+    top: 2px;
+  }
+  75% {
+    left: 0px;
+    top: 3px;
+  }
+  100% {
+    left: 0px;
+    top: 4px;
+  }
+}
+
+@keyframes mytail {
+  0% {
+    left: 71px;
+    top: 62px;
+    -moz-transform: rotate(-10deg);
+  }
+  50% {
+    left: 71px;
+    -moz-transform: rotate(0deg);
+    top: 64px;
+  }
+  100% {
+    left: 71px;
+    top: 66px;
+    -moz-transform: rotate(10deg);
+  }
+}
+
+@-webkit-keyframes mytail /* Safari and Chrome */ {
+  0% {
+    left: 71px;
+    top: 62px;
+    -webkit-transform: rotate(-10deg);
+  }
+  50% {
+    left: 71px;
+    -webkit-transform: rotate(0deg);
+    top: 64px;
+  }
+  100% {
+    left: 71px;
+    top: 66px;
+    -webkit-transform: rotate(10deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
