@@ -1,0 +1,91 @@
+html {
+  color: #000000;
+}
+
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ffffeb;
+  color: #000;
+  font-family: Artial, sans-serif;
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-style: normal;
+  color: #0045c6;
+  text-decoration: none;
+  outline: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main {
+  max-width: 955px;
+  margin: 0 auto;
+}
+
+main .big-container {
+  padding-top: 40px;
+}
+
+main footer .copyright {
+  font-size: 10px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 20px;
+  position: relative;
+}
+
+main footer .copyright .ft_sep {
+  border-bottom: 1px solid #ffd99e;
+  clear: both;
+  height: 7px;
+  margin: 0 auto 7px;
+}
+
+main footer .copyright a {
+  margin-right: 5px;
+}
+
+main footer .copyright a:hover {
+  text-decoration: underline;
+}
+
+main footer .copyright .stamp-red01 {
+  position: absolute;
+  background: none repeat scroll 0 0 transparent;
+  border: 3px solid #d91b12;
+  border-radius: 65px;
+  height: 55px;
+  width: 55px;
+  padding: 2px;
+  right: 120px;
+  top: -25px;
+}
+
+main footer .copyright .stamp-red01 .stamp-red02 {
+  background: none repeat scroll 0 0 transparent;
+  border: 1px solid #d91b12;
+  border-radius: 65px;
+  height: 53px;
+  width: 53px;
+}
+
+main footer .copyright .stamp-red01 .stamp-red02 .stamp-text {
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  margin: 0;
+  padding: 10px 0;
+  padding: 13px 0;
+  color: #d91b12;
+  font-size: 13px;
+  line-height: 16px;
+}
+/*# sourceMappingURL=style.css.map */
