@@ -104,6 +104,12 @@ main .container .all .donation-container {
 }
 
 main .container .all .donation-container .donation-box .newadd-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 1px solid #e0ba53;
   background: #f7d661;
   background: -webkit-gradient(linear, left top, left bottom, from(#fcefb1), to(#f7d65f));
@@ -116,8 +122,7 @@ main .container .all .donation-container .donation-box .newadd-link {
   font-size: 15px;
   vertical-align: middle;
   width: 215px;
-  float: left;
-  margin: 0 0 11px 3px;
+  margin: 0 0 12px 3px;
   cursor: pointer;
   text-align: center;
   -webkit-transition: all 0.3s ease;
@@ -133,6 +138,13 @@ main .container .all .donation-container .donation-box .newadd-link:hover {
 }
 
 main .container .all .donation-container .donation-box .ad-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: left;
   position: relative;
   background: #fffee9;
@@ -150,8 +162,10 @@ main .container .all .donation-container .donation-box .ad-bar {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffee9', endColorstr='#fff1d7',GradientType=0 );
   /* IE6-8 */
   padding: 20px 7px 10px 11px;
-  float: left;
   width: 215px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-shadow: 0 0 5px #c3a558;
   box-shadow: 0 0 5px #c3a558;
   border-radius: 4px;
@@ -166,7 +180,6 @@ main .container .all .donation-container .donation-box .ad-bar .txt1 {
 
 main .container .all .donation-container .donation-box .ad-bar .txt1.txt2 {
   font-size: 12px;
-  float: left;
   width: 235px;
 }
 
@@ -176,13 +189,11 @@ main .container .all .donation-container .donation-box .ad-bar .txt1.txt2 span {
 
 main .container .all .donation-container .donation-box .ad-bar .txt1.status {
   background: url(https://statics.iyocdn.com/ja/img/donation-status.png) no-repeat scroll -8px top;
-  float: left;
   width: 100%;
 }
 
 main .container .all .donation-container .donation-box .ad-bar .txt1 ul {
   width: 206px;
-  float: left;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -227,6 +238,12 @@ main .container .all .donation-container .donation-box .ad-bar .flag-square .red
 
 main .container .all .donation-container .donation-box .ad-bar .red-text {
   color: #f93b3b;
+}
+
+main .container .all .donation-container .donation-box .ad-bar .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .container .all .donation-container .donation-box .ad-bar .up-triangle {
@@ -1000,21 +1017,45 @@ main footer .copyright a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-top: 12px;
   }
   main .container .all .left .mobile-donation-container .donation-container {
+    display: inline;
     position: static;
     z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .container .all .left .mobile-donation-container .donation-container .donation-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 0;
   }
   main .container .all .left .mobile-donation-container .donation-container .donation-box .newadd-link {
-    margin: 0;
-    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 90%;
+    margin: 0 0 12px;
   }
   main .container .all .left .mobile-donation-container .donation-container .donation-box .ad-bar {
-    display: none;
+    margin: 0;
+  }
+  main .container .all .left .mobile-donation-container .donation-container .donation-box .ad-bar .txt1 {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  main .container .all .left .mobile-donation-container .donation-container .donation-box .ad-bar .txt1.txt2 {
+    width: 100%;
   }
   main .container .all .right {
     width: 100%;

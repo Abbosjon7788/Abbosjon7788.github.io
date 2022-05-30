@@ -81,6 +81,8 @@ main {
                 z-index: 10;
                 .donation-box {
                     .newadd-link {
+                        display: flex;
+                        justify-content: center;
                         border: 1px solid #e0ba53;
                         background: #f7d661;
                         background: linear-gradient(to bottom, #fcefb1, #f7d65f);
@@ -96,8 +98,8 @@ main {
                         font-size: 15px;
                         vertical-align: middle;
                         width: 215px;
-                        float: left;
-                        margin: 0 0 11px 3px;
+                        // float: left;
+                        margin: 0 0 12px 3px;
                         cursor: pointer;
                         text-align: center;
                         transition: all 0.3s ease;
@@ -111,6 +113,8 @@ main {
                         }
                     }
                     .ad-bar {
+                        display: flex;
+                        flex-direction: column;
                         text-align: left;
                         position: relative;
                         background: #fffee9; /* Old browsers */
@@ -132,14 +136,16 @@ main {
                         background: linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* W3C */
                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffee9', endColorstr='#fff1d7',GradientType=0 ); /* IE6-8 */
                         padding: 20px 7px 10px 11px;
-                        float: left;
+                        // float: left;
                         width: 215px;
+                        height: fit-content;
                         -moz-box-shadow: 0 0 4px #c3a558;
                         -webkit-box-shadow: 0 0 5px #c3a558;
                         box-shadow: 0 0 5px #c3a558;
                         -webkit-border-radius: 4px;
                         -moz-border-radius: 4px;
                         border-radius: 4px;
+
                         .txt1 {
                             text-align: left;
                             position: relative;
@@ -147,7 +153,7 @@ main {
                             line-height: 16px;
                             &.txt2 {
                                 font-size: 12px;
-                                float: left;
+                                // float: left;
                                 width: 235px;
                                 span {
                                     color: #f93b3b;
@@ -156,12 +162,12 @@ main {
                             &.status {
                                 background: url(https://statics.iyocdn.com/ja/img/donation-status.png) no-repeat scroll -8px
                                     top;
-                                float: left;
+                                // float: left;
                                 width: 100%;
                             }
                             ul {
                                 width: 206px;
-                                float: left;
+                                // float: left;
                                 margin: 0;
                                 padding: 0;
                                 list-style: none;
@@ -202,6 +208,9 @@ main {
 
                         .red-text {
                             color: #f93b3b;
+                        }
+                        .flex {
+                            display: flex;
                         }
                         .up-triangle {
                             width: 23px;
@@ -964,18 +973,33 @@ main {
                     }
                     .mobile-donation-container {
                         display: flex;
-                        justify-content: center;
                         margin-top: 12px;
                         .donation-container {
+                            display: inline;
                             position: static;
                             z-index: 1;
+                            width: 100%;
+                            margin: 0 auto;
                             .donation-box {
+                                display: flex;
+                                align-items: center;
+                                flex-direction: column;
+                                width: 100%;
+                                margin: 0;
                                 .newadd-link {
-                                    margin: 0;
-                                    width: 100%;
+                                    box-sizing: border-box;
+                                    width: 90%;
+                                    margin: 0 0 12px;
                                 }
                                 .ad-bar {
-                                    display: none;
+                                    margin: 0;
+                                    .txt1 {
+                                        width: 100%;
+                                        box-sizing: border-box;
+                                        &.txt2 {
+                                            width: 100%;
+                                        }
+                                    }
                                 }
                             }
                         }
