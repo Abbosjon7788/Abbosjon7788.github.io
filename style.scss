@@ -993,13 +993,7 @@ main {
                                 }
                                 .ad-bar {
                                     margin: 0;
-                                    .txt1 {
-                                        width: 100%;
-                                        box-sizing: border-box;
-                                        &.txt2 {
-                                            width: 100%;
-                                        }
-                                    }
+                                    display: none;
                                 }
                             }
                         }

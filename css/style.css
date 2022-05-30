@@ -1048,14 +1048,7 @@ main footer .copyright a:hover {
   }
   main .container .all .left .mobile-donation-container .donation-container .donation-box .ad-bar {
     margin: 0;
-  }
-  main .container .all .left .mobile-donation-container .donation-container .donation-box .ad-bar .txt1 {
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  main .container .all .left .mobile-donation-container .donation-container .donation-box .ad-bar .txt1.txt2 {
-    width: 100%;
+    display: none;
   }
   main .container .all .right {
     width: 100%;
