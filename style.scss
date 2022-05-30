@@ -4,7 +4,7 @@ html {
 
 body {
     height: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
     padding: 0;
     background-color: #ffffeb;
     color: #000;
@@ -38,221 +38,239 @@ main {
     justify-content: space-between;
     min-height: 100vh;
     max-width: 955px;
+    width: 100%;
     margin: 0 auto;
     .container {
-        padding: 10px 0;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+        .mobile-navbar {
+            display: none;
+        }
+        .logo {
+            overflow: hidden;
+            z-index: 1;
+            width: 100%;
+            margin-bottom: 10px;
+            .logo-link {
+                background-position: -27px -102px;
+                display: block;
+                height: 67px;
+            }
+            a {
+                float: left;
+                width: 100%;
+                span {
+                    color: #c0a32b;
+                    float: left;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-top: 0;
+                    padding: 4px 0 0;
+                }
+            }
+        }
         .all {
             display: flex;
-            .left {
-                width: 365px;
-                .logo {
-                    overflow: hidden;
-                    z-index: 1;
-                    width: 100%;
-                    margin-bottom: 10px;
-                    .logo-link {
-                        background-position: -27px -102px;
-                        display: block;
-                        height: 67px;
-                    }
-                    a {
+            .donation-container {
+                position: absolute;
+                top: 0;
+                left: 24px;
+                width: 255px;
+                z-index: 10;
+                .donation-box {
+                    .newadd-link {
+                        border: 1px solid #e0ba53;
+                        background: #f7d661;
+                        background: linear-gradient(to bottom, #fcefb1, #f7d65f);
+                        background: -webkit-linear-gradient(to bottom, #fcefb1, #f7d65f);
+                        background: -moz-linear-gradient(to bottom, #fcefb1, #f7d65f);
+                        background: -o-linear-gradient(to bottom, #fcefb1, #f7d65f);
+                        padding: 8px 5px;
+                        -webkit-border-radius: 4px;
+                        -moz-border-radius: 4px;
+                        border-radius: 4px;
+                        text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+                        color: #0045c6;
+                        font-size: 15px;
+                        vertical-align: middle;
+                        width: 215px;
                         float: left;
-                        width: 100%;
-                        span {
-                            color: #c0a32b;
+                        margin: 0 0 11px 3px;
+                        cursor: pointer;
+                        text-align: center;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            color: #0045c6;
+                            background: #fcefb1;
+                            background: linear-gradient(to bottom, #f7d661, #fcefb1);
+                            background: -webkit-linear-gradient(to bottom, #f7d661, #fcefb1);
+                            background: -moz-linear-gradient(to bottom, #f7d661, #fcefb1);
+                            background: -o-linear-gradient(to bottom, #f7d661, #fcefb1);
+                        }
+                    }
+                    .ad-bar {
+                        text-align: left;
+                        position: relative;
+                        background: #fffee9; /* Old browsers */
+                        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+                        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmVlOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmYxZDciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+                        background: -moz-linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* FF3.6+ */
+                        background: -webkit-linear-gradient(
+                            from top right to bottom left,
+                            color-stop(0%, #fffee9),
+                            color-stop(100%, #fff1d7)
+                        ); /* Chrome,Safari4+ */
+                        background: -webkit-linear-gradient(
+                            from bottom to top,
+                            #fffee9 0%,
+                            #fff1d7 100%
+                        ); /* Chrome10+,Safari5.1+ */
+                        background: -o-linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* Opera 11.10+ */
+                        background: -ms-linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* IE10+ */
+                        background: linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* W3C */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffee9', endColorstr='#fff1d7',GradientType=0 ); /* IE6-8 */
+                        padding: 20px 7px 10px 11px;
+                        float: left;
+                        width: 215px;
+                        -moz-box-shadow: 0 0 4px #c3a558;
+                        -webkit-box-shadow: 0 0 5px #c3a558;
+                        box-shadow: 0 0 5px #c3a558;
+                        -webkit-border-radius: 4px;
+                        -moz-border-radius: 4px;
+                        border-radius: 4px;
+                        .txt1 {
+                            text-align: left;
+                            position: relative;
+                            width: 215px;
+                            line-height: 16px;
+                            &.txt2 {
+                                font-size: 12px;
+                                float: left;
+                                width: 235px;
+                                span {
+                                    color: #f93b3b;
+                                }
+                            }
+                            &.status {
+                                background: url(https://statics.iyocdn.com/ja/img/donation-status.png) no-repeat scroll -8px
+                                    top;
+                                float: left;
+                                width: 100%;
+                            }
+                            ul {
+                                width: 206px;
+                                float: left;
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
+                                height: 22px;
+                                padding-left: 28px;
+                                &.top {
+                                    padding-top: 14px;
+                                    height: 20px;
+                                }
+                                &.bottom {
+                                    padding-top: 10px;
+                                }
+                                li {
+                                    float: left;
+                                    width: 39px;
+                                    margin-left: 25px;
+                                }
+                            }
+                        }
+                        .flag-square {
+                            width: 15px;
+                            height: 11px;
+                            border: 1px solid #e1e3e2;
+                            background: #fff;
+                            position: relative;
                             float: left;
-                            font-size: 16px;
-                            font-weight: bold;
-                            letter-spacing: 1px;
-                            margin-top: 0;
-                            padding: 4px 0 0;
+                            margin: 1px 7px 0 0;
+                            .red-circle {
+                                background: red;
+                                border-radius: 70px;
+                                height: 7px;
+                                left: 4px;
+                                position: absolute;
+                                top: 2px;
+                                width: 7px;
+                            }
+                        }
+
+                        .red-text {
+                            color: #f93b3b;
+                        }
+                        .up-triangle {
+                            width: 23px;
+                            height: 23px;
+                            background: #fffeea;
+                            box-shadow: 2px -2px 2px -1px #c3a558;
+                            -webkit-transform: rotate(-45deg);
+                            -moz-transform: rotate(-45deg);
+                            -ms-transform: rotate(-45deg);
+                            -o-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+
+                            -webkit-transform-origin: 0 100%;
+                            -moz-transform-origin: 0 100%;
+                            -ms-transform-origin: 0 100%;
+                            -o-transform-origin: 0 100%;
+                            transform-origin: 0 100%;
+                            left: 116px;
+                            position: absolute;
+                            top: -7px;
+                            z-index: 0;
                         }
                     }
                 }
+            }
+            .left {
+                width: 365px;
                 .home-youtube {
-                    height: 263px;
-                    width: 100%;
-                    overflow: hidden;
+                    width: fit-content;
                     a {
-                        display: block;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 263px;
+                        width: 100%;
+                        overflow: hidden;
+                        border-radius: 8px;
                         img {
                             width: 100%;
                             height: 100%;
-                            object-fit: cover;
                         }
                     }
+                }
+                .mobile-donation-container {
+                    display: none;
                 }
             }
             .right {
                 display: flex;
                 width: calc(100% - 365px);
                 position: relative;
-                .donation-container {
-                    position: absolute;
-                    top: 0;
-                    left: 24px;
-                    width: 255px;
-                    z-index: 10;
-                    .donation-box {
-                        .newadd-link {
-                            border: 1px solid #e0ba53;
-                            background: #f7d661;
-                            background: linear-gradient(to bottom, #fcefb1, #f7d65f);
-                            background: -webkit-linear-gradient(to bottom, #fcefb1, #f7d65f);
-                            background: -moz-linear-gradient(to bottom, #fcefb1, #f7d65f);
-                            background: -o-linear-gradient(to bottom, #fcefb1, #f7d65f);
-                            padding: 8px 5px;
-                            -webkit-border-radius: 4px;
-                            -moz-border-radius: 4px;
-                            border-radius: 4px;
-                            text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
-                            color: #0045c6;
-                            font-size: 15px;
-                            vertical-align: middle;
-                            width: 215px;
-                            float: left;
-                            margin: 0 0 11px 3px;
-                            cursor: pointer;
-                            text-align: center;
-                            transition: all 0.3s ease;
-                            &:hover {
-                                color: #0045c6;
-                                background: #fcefb1;
-                                background: linear-gradient(to bottom, #f7d661, #fcefb1);
-                                background: -webkit-linear-gradient(to bottom, #f7d661, #fcefb1);
-                                background: -moz-linear-gradient(to bottom, #f7d661, #fcefb1);
-                                background: -o-linear-gradient(to bottom, #f7d661, #fcefb1);
-                            }
-                        }
-                        .ad-bar {
-                            text-align: left;
-                            position: relative;
-                            background: #fffee9; /* Old browsers */
-                            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-                            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmVlOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmYxZDciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-                            background: -moz-linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* FF3.6+ */
-                            background: -webkit-linear-gradient(
-                                from top right to bottom left,
-                                color-stop(0%, #fffee9),
-                                color-stop(100%, #fff1d7)
-                            ); /* Chrome,Safari4+ */
-                            background: -webkit-linear-gradient(
-                                from bottom to top,
-                                #fffee9 0%,
-                                #fff1d7 100%
-                            ); /* Chrome10+,Safari5.1+ */
-                            background: -o-linear-gradient(
-                                from bottom to top,
-                                #fffee9 0%,
-                                #fff1d7 100%
-                            ); /* Opera 11.10+ */
-                            background: -ms-linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* IE10+ */
-                            background: linear-gradient(from bottom to top, #fffee9 0%, #fff1d7 100%); /* W3C */
-                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffee9', endColorstr='#fff1d7',GradientType=0 ); /* IE6-8 */
-                            padding: 20px 7px 10px 11px;
-                            float: left;
-                            width: 215px;
-                            -moz-box-shadow: 0 0 4px #c3a558;
-                            -webkit-box-shadow: 0 0 5px #c3a558;
-                            box-shadow: 0 0 5px #c3a558;
-                            -webkit-border-radius: 4px;
-                            -moz-border-radius: 4px;
-                            border-radius: 4px;
-                            .txt1 {
-                                text-align: left;
-                                position: relative;
-                                width: 215px;
-                                line-height: 16px;
-                                &.txt2 {
-                                    font-size: 12px;
-                                    float: left;
-                                    width: 235px;
-                                    span {
-                                        color: #f93b3b;
-                                    }
-                                }
-                                &.status {
-                                    background: url(https://statics.iyocdn.com/ja/img/donation-status.png) no-repeat
-                                        scroll -8px top;
-                                    float: left;
-                                    width: 100%;
-                                }
-                                ul {
-                                    width: 206px;
-                                    float: left;
-                                    margin: 0;
-                                    padding: 0;
-                                    list-style: none;
-                                    height: 22px;
-                                    padding-left: 28px;
-                                    &.top {
-                                        padding-top: 14px;
-                                        height: 20px;
-                                    }
-                                    &.bottom {
-                                        padding-top: 10px;
-                                    }
-                                    li {
-                                        float: left;
-                                        width: 39px;
-                                        margin-left: 25px;
-                                    }
-                                }
-                            }
-                            .flag-square {
-                                width: 15px;
-                                height: 11px;
-                                border: 1px solid #e1e3e2;
-                                background: #fff;
-                                position: relative;
-                                float: left;
-                                margin: 1px 7px 0 0;
-                                .red-circle {
-                                    background: red;
-                                    border-radius: 70px;
-                                    height: 7px;
-                                    left: 4px;
-                                    position: absolute;
-                                    top: 2px;
-                                    width: 7px;
-                                }
-                            }
 
-                            .red-text {
-                                color: #f93b3b;
-                            }
-                            .up-triangle {
-                                width: 23px;
-                                height: 23px;
-                                background: #fffeea;
-                                box-shadow: 2px -2px 2px -1px #c3a558;
-                                -webkit-transform: rotate(-45deg);
-                                -moz-transform: rotate(-45deg);
-                                -ms-transform: rotate(-45deg);
-                                -o-transform: rotate(-45deg);
-                                transform: rotate(-45deg);
-
-                                -webkit-transform-origin: 0 100%;
-                                -moz-transform-origin: 0 100%;
-                                -ms-transform-origin: 0 100%;
-                                -o-transform-origin: 0 100%;
-                                transform-origin: 0 100%;
-                                left: 116px;
-                                position: absolute;
-                                top: -7px;
-                                z-index: 0;
-                            }
-                        }
-                    }
-                }
                 #jp-prefectures {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // overflow: hidden;
                     height: 705px;
                     width: 551px;
                     margin-left: auto;
                     position: relative;
                     img.maphilighted {
-                        width: 551px;
-                        height: 705px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
                     }
                     .mp-1 {
                         position: absolute;
@@ -579,6 +597,7 @@ main {
             cursor: move;
             z-index: 100;
             position: relative;
+            opacity: 1;
             .dog-note {
                 position: absolute;
                 bottom: 250px;
@@ -881,5 +900,373 @@ main {
         left: 71px;
         top: 66px;
         -webkit-transform: rotate(10deg);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        .container {
+            padding: 0;
+            .mobile-navbar {
+                display: block;
+                padding-bottom: 110px;
+                .header {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: #ffffeb;
+                    z-index: 9999;
+
+                    .logo {
+                        width: 295px;
+                        margin: 0;
+                        .logo-link {
+                            height: 60px;
+                            background-position: -27px -111px;
+                        }
+                        a {
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: #ffd99e;
+                        box-shadow: 0 0 5px #c3a558;
+                    }
+                }
+            }
+            .all {
+                display: block;
+                padding: 0 10px 10px;
+                margin-bottom: 32px;
+                .left {
+                    width: 100%;
+                    .logo {
+                        display: none;
+                    }
+                    .home-youtube {
+                        width: 100%;
+                        a {
+                            height: 250px;
+                        }
+                    }
+                    .mobile-donation-container {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 12px;
+                        .donation-container {
+                            position: static;
+                            z-index: 1;
+                            .donation-box {
+                                .newadd-link {
+                                    margin: 0;
+                                    width: 100%;
+                                }
+                                .ad-bar {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width: 100%;
+                    margin-top: 24px;
+                    .donation-container {
+                        display: none;
+                    }
+                    #jp-prefectures {
+                        height: 445px;
+                        width: 90%;
+                        .video-1-1 {
+                            top: 5px;
+                            left: 156px;
+                        }
+                        .video-2-1 {
+                            left: 272px;
+                            top: 155px;
+                        }
+
+                        .video-2-2 {
+                            left: 780px;
+                            top: 295px;
+                        }
+
+                        .video-2-3 {
+                            left: 755px;
+                            top: 320px;
+                        }
+
+                        .video-2-4 {
+                            left: 857px;
+                            top: 289px;
+                        }
+
+                        .video-2-5 {
+                            left: 832px;
+                            top: 313px;
+                        }
+
+                        .video-2-6 {
+                            left: 807px;
+                            top: 338px;
+                        }
+
+                        .video-3-1 {
+                            left: 275px;
+                            top: 237px;
+                        }
+
+                        .video-3-2 {
+                            left: 256px;
+                            top: 259px;
+                        }
+
+                        .video-3-3 {
+                            left: 235px;
+                            top: 281px;
+                        }
+
+                        .video-3-4 {
+                            left: 283px;
+                            top: 270px;
+                        }
+
+                        .video-3-5 {
+                            left: 271px;
+                            top: 297px;
+                        }
+
+                        .video-3-6 {
+                            left: 422px;
+                            top: 477px;
+                        }
+
+                        .video-3-7 {
+                            left: 397px;
+                            top: 502px;
+                        }
+
+                        .video-4-1 {
+                            left: 116px;
+                            top: 145px;
+                        }
+
+                        .video-4-2 {
+                            left: 91px;
+                            top: 162px;
+                        }
+
+                        .video-4-3 {
+                            left: 71px;
+                            top: 180px;
+                        }
+
+                        .video-4-4 {
+                            left: 527px;
+                            top: 347px;
+                        }
+
+                        .video-4-5 {
+                            left: 502px;
+                            top: 372px;
+                        }
+
+                        .video-4-6 {
+                            left: 550px;
+                            top: 255px;
+                        }
+
+                        .video-4-7 {
+                            left: 525px;
+                            top: 280px;
+                        }
+
+                        .video-4-8 {
+                            left: 500px;
+                            top: 305px;
+                        }
+
+                        .video-4-9 {
+                            left: 475px;
+                            top: 330px;
+                        }
+
+                        .video-5-1 {
+                            left: 187px;
+                            top: 315px;
+                        }
+
+                        .video-5-2 {
+                            left: 168px;
+                            top: 336px;
+                        }
+
+                        .video-5-3 {
+                            left: 150px;
+                            top: 353px;
+                        }
+
+                        .video-5-4 {
+                            left: 226px;
+                            top: 332px;
+                        }
+
+                        .video-5-5 {
+                            left: 302px;
+                            top: 542px;
+                        }
+
+                        .video-5-6 {
+                            left: 277px;
+                            top: 567px;
+                        }
+
+                        .video-5-7 {
+                            left: 255px;
+                            top: 592px;
+                        }
+
+                        .video-6-1 {
+                            left: 50px;
+                            top: 209px;
+                        }
+
+                        .video-6-2 {
+                            left: 395px;
+                            top: 435px;
+                        }
+
+                        .video-6-3 {
+                            left: 393px;
+                            top: 365px;
+                        }
+
+                        .video-6-4 {
+                            left: 368px;
+                            top: 390px;
+                        }
+
+                        .video-6-5 {
+                            left: 343px;
+                            top: 415px;
+                        }
+
+                        .video-7-1 {
+                            left: 90px;
+                            top: 355px;
+                        }
+
+                        .video-7-2 {
+                            left: 68px;
+                            top: 381px;
+                        }
+
+                        .video-7-3 {
+                            left: 182px;
+                            top: 610px;
+                        }
+
+                        .video-7-4 {
+                            left: 157px;
+                            top: 635px;
+                        }
+
+                        .video-8-1 {
+                            left: -3px;
+                            top: 255px;
+                        }
+
+                        .video-8-2 {
+                            left: -24px;
+                            top: 268px;
+                        }
+
+                        .video-8-3 {
+                            left: -35px;
+                            top: 282px;
+                        }
+
+                        .video-8-4 {
+                            left: -13px;
+                            top: 224px;
+                        }
+
+                        .video-8-5 {
+                            left: 263px;
+                            top: 482px;
+                        }
+
+                        .video-8-6 {
+                            left: 238px;
+                            top: 507px;
+                        }
+
+                        .video-8-7 {
+                            left: 213px;
+                            top: 532px;
+                        }
+
+                        .video-9-1 {
+                            left: -38px;
+                            top: 426px;
+                        }
+                        .speech-bubble {
+                            height: 20px;
+                            width: 33px;
+                            padding: 2px;
+                            a {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 100%;
+                                width: 100%;
+                                overflow: hidden;
+                                border-radius: 4px;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                    .prefectures {
+                        display: none;
+                    }
+                }
+            }
+            #draggable {
+                display: none;
+            }
+        }
+        footer {
+            .copyright {
+                .ft_sep {
+                    .stamp-red01 {
+                        right: 5%;
+                    }
+                }
+                .link-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                }
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
     }
 }

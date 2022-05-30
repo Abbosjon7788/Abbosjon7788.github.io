@@ -4,7 +4,6 @@ html {
 
 body {
   height: 100%;
-  margin: 0 auto;
   padding: 0;
   background-color: #ffffeb;
   color: #000;
@@ -47,42 +46,40 @@ main {
           justify-content: space-between;
   min-height: 100vh;
   max-width: 955px;
+  width: 100%;
   margin: 0 auto;
 }
 
 main .container {
-  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
 }
 
-main .container .all {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+main .container .mobile-navbar {
+  display: none;
 }
 
-main .container .all .left {
-  width: 365px;
-}
-
-main .container .all .left .logo {
+main .container .logo {
   overflow: hidden;
   z-index: 1;
   width: 100%;
   margin-bottom: 10px;
 }
 
-main .container .all .left .logo .logo-link {
+main .container .logo .logo-link {
   background-position: -27px -102px;
   display: block;
   height: 67px;
 }
 
-main .container .all .left .logo a {
+main .container .logo a {
   float: left;
   width: 100%;
 }
 
-main .container .all .left .logo a span {
+main .container .logo a span {
   color: #c0a32b;
   float: left;
   font-size: 16px;
@@ -92,32 +89,13 @@ main .container .all .left .logo a span {
   padding: 4px 0 0;
 }
 
-main .container .all .left .home-youtube {
-  height: 263px;
-  width: 100%;
-  overflow: hidden;
-}
-
-main .container .all .left .home-youtube a {
-  display: block;
-}
-
-main .container .all .left .home-youtube a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-main .container .all .right {
+main .container .all {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% - 365px);
-  position: relative;
 }
 
-main .container .all .right .donation-container {
+main .container .all .donation-container {
   position: absolute;
   top: 0;
   left: 24px;
@@ -125,7 +103,7 @@ main .container .all .right .donation-container {
   z-index: 10;
 }
 
-main .container .all .right .donation-container .donation-box .newadd-link {
+main .container .all .donation-container .donation-box .newadd-link {
   border: 1px solid #e0ba53;
   background: #f7d661;
   background: -webkit-gradient(linear, left top, left bottom, from(#fcefb1), to(#f7d65f));
@@ -146,7 +124,7 @@ main .container .all .right .donation-container .donation-box .newadd-link {
   transition: all 0.3s ease;
 }
 
-main .container .all .right .donation-container .donation-box .newadd-link:hover {
+main .container .all .donation-container .donation-box .newadd-link:hover {
   color: #0045c6;
   background: #fcefb1;
   background: -webkit-gradient(linear, left top, left bottom, from(#f7d661), to(#fcefb1));
@@ -154,7 +132,7 @@ main .container .all .right .donation-container .donation-box .newadd-link:hover
   background: -o-linear-gradient(to bottom, #f7d661, #fcefb1);
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar {
+main .container .all .donation-container .donation-box .ad-bar {
   text-align: left;
   position: relative;
   background: #fffee9;
@@ -179,30 +157,30 @@ main .container .all .right .donation-container .donation-box .ad-bar {
   border-radius: 4px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1 {
+main .container .all .donation-container .donation-box .ad-bar .txt1 {
   text-align: left;
   position: relative;
   width: 215px;
   line-height: 16px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1.txt2 {
+main .container .all .donation-container .donation-box .ad-bar .txt1.txt2 {
   font-size: 12px;
   float: left;
   width: 235px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1.txt2 span {
+main .container .all .donation-container .donation-box .ad-bar .txt1.txt2 span {
   color: #f93b3b;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1.status {
+main .container .all .donation-container .donation-box .ad-bar .txt1.status {
   background: url(https://statics.iyocdn.com/ja/img/donation-status.png) no-repeat scroll -8px top;
   float: left;
   width: 100%;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1 ul {
+main .container .all .donation-container .donation-box .ad-bar .txt1 ul {
   width: 206px;
   float: left;
   margin: 0;
@@ -212,22 +190,22 @@ main .container .all .right .donation-container .donation-box .ad-bar .txt1 ul {
   padding-left: 28px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1 ul.top {
+main .container .all .donation-container .donation-box .ad-bar .txt1 ul.top {
   padding-top: 14px;
   height: 20px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1 ul.bottom {
+main .container .all .donation-container .donation-box .ad-bar .txt1 ul.bottom {
   padding-top: 10px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .txt1 ul li {
+main .container .all .donation-container .donation-box .ad-bar .txt1 ul li {
   float: left;
   width: 39px;
   margin-left: 25px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .flag-square {
+main .container .all .donation-container .donation-box .ad-bar .flag-square {
   width: 15px;
   height: 11px;
   border: 1px solid #e1e3e2;
@@ -237,7 +215,7 @@ main .container .all .right .donation-container .donation-box .ad-bar .flag-squa
   margin: 1px 7px 0 0;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .flag-square .red-circle {
+main .container .all .donation-container .donation-box .ad-bar .flag-square .red-circle {
   background: red;
   border-radius: 70px;
   height: 7px;
@@ -247,11 +225,11 @@ main .container .all .right .donation-container .donation-box .ad-bar .flag-squa
   width: 7px;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .red-text {
+main .container .all .donation-container .donation-box .ad-bar .red-text {
   color: #f93b3b;
 }
 
-main .container .all .right .donation-container .donation-box .ad-bar .up-triangle {
+main .container .all .donation-container .donation-box .ad-bar .up-triangle {
   width: 23px;
   height: 23px;
   background: #fffeea;
@@ -267,7 +245,59 @@ main .container .all .right .donation-container .donation-box .ad-bar .up-triang
   z-index: 0;
 }
 
+main .container .all .left {
+  width: 365px;
+}
+
+main .container .all .left .home-youtube {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+main .container .all .left .home-youtube a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 263px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+main .container .all .left .home-youtube a img {
+  width: 100%;
+  height: 100%;
+}
+
+main .container .all .left .mobile-donation-container {
+  display: none;
+}
+
+main .container .all .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 365px);
+  position: relative;
+}
+
 main .container .all .right #jp-prefectures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 705px;
   width: 551px;
   margin-left: auto;
@@ -275,8 +305,15 @@ main .container .all .right #jp-prefectures {
 }
 
 main .container .all .right #jp-prefectures img.maphilighted {
-  width: 551px;
-  height: 705px;
+  width: 100%;
+  height: 100%;
+}
+
+main .container .all .right #jp-prefectures img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main .container .all .right #jp-prefectures .mp-1 {
@@ -617,6 +654,7 @@ main .container #draggable {
   cursor: move;
   z-index: 100;
   position: relative;
+  opacity: 1;
 }
 
 main .container #draggable .dog-note {
@@ -890,6 +928,339 @@ main footer .copyright a:hover {
     left: 71px;
     top: 66px;
     -webkit-transform: rotate(10deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .container {
+    padding: 0;
+  }
+  main .container .mobile-navbar {
+    display: block;
+    padding-bottom: 110px;
+  }
+  main .container .mobile-navbar .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #ffffeb;
+    z-index: 9999;
+  }
+  main .container .mobile-navbar .header .logo {
+    width: 295px;
+    margin: 0;
+  }
+  main .container .mobile-navbar .header .logo .logo-link {
+    height: 60px;
+    background-position: -27px -111px;
+  }
+  main .container .mobile-navbar .header .logo a span {
+    font-size: 12px;
+  }
+  main .container .mobile-navbar .header::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #ffd99e;
+    -webkit-box-shadow: 0 0 5px #c3a558;
+            box-shadow: 0 0 5px #c3a558;
+  }
+  main .container .all {
+    display: block;
+    padding: 0 10px 10px;
+    margin-bottom: 32px;
+  }
+  main .container .all .left {
+    width: 100%;
+  }
+  main .container .all .left .logo {
+    display: none;
+  }
+  main .container .all .left .home-youtube {
+    width: 100%;
+  }
+  main .container .all .left .home-youtube a {
+    height: 250px;
+  }
+  main .container .all .left .mobile-donation-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 12px;
+  }
+  main .container .all .left .mobile-donation-container .donation-container {
+    position: static;
+    z-index: 1;
+  }
+  main .container .all .left .mobile-donation-container .donation-container .donation-box .newadd-link {
+    margin: 0;
+    width: 100%;
+  }
+  main .container .all .left .mobile-donation-container .donation-container .donation-box .ad-bar {
+    display: none;
+  }
+  main .container .all .right {
+    width: 100%;
+    margin-top: 24px;
+  }
+  main .container .all .right .donation-container {
+    display: none;
+  }
+  main .container .all .right #jp-prefectures {
+    height: 445px;
+    width: 90%;
+  }
+  main .container .all .right #jp-prefectures .video-1-1 {
+    top: 5px;
+    left: 156px;
+  }
+  main .container .all .right #jp-prefectures .video-2-1 {
+    left: 272px;
+    top: 155px;
+  }
+  main .container .all .right #jp-prefectures .video-2-2 {
+    left: 780px;
+    top: 295px;
+  }
+  main .container .all .right #jp-prefectures .video-2-3 {
+    left: 755px;
+    top: 320px;
+  }
+  main .container .all .right #jp-prefectures .video-2-4 {
+    left: 857px;
+    top: 289px;
+  }
+  main .container .all .right #jp-prefectures .video-2-5 {
+    left: 832px;
+    top: 313px;
+  }
+  main .container .all .right #jp-prefectures .video-2-6 {
+    left: 807px;
+    top: 338px;
+  }
+  main .container .all .right #jp-prefectures .video-3-1 {
+    left: 275px;
+    top: 237px;
+  }
+  main .container .all .right #jp-prefectures .video-3-2 {
+    left: 256px;
+    top: 259px;
+  }
+  main .container .all .right #jp-prefectures .video-3-3 {
+    left: 235px;
+    top: 281px;
+  }
+  main .container .all .right #jp-prefectures .video-3-4 {
+    left: 283px;
+    top: 270px;
+  }
+  main .container .all .right #jp-prefectures .video-3-5 {
+    left: 271px;
+    top: 297px;
+  }
+  main .container .all .right #jp-prefectures .video-3-6 {
+    left: 422px;
+    top: 477px;
+  }
+  main .container .all .right #jp-prefectures .video-3-7 {
+    left: 397px;
+    top: 502px;
+  }
+  main .container .all .right #jp-prefectures .video-4-1 {
+    left: 116px;
+    top: 145px;
+  }
+  main .container .all .right #jp-prefectures .video-4-2 {
+    left: 91px;
+    top: 162px;
+  }
+  main .container .all .right #jp-prefectures .video-4-3 {
+    left: 71px;
+    top: 180px;
+  }
+  main .container .all .right #jp-prefectures .video-4-4 {
+    left: 527px;
+    top: 347px;
+  }
+  main .container .all .right #jp-prefectures .video-4-5 {
+    left: 502px;
+    top: 372px;
+  }
+  main .container .all .right #jp-prefectures .video-4-6 {
+    left: 550px;
+    top: 255px;
+  }
+  main .container .all .right #jp-prefectures .video-4-7 {
+    left: 525px;
+    top: 280px;
+  }
+  main .container .all .right #jp-prefectures .video-4-8 {
+    left: 500px;
+    top: 305px;
+  }
+  main .container .all .right #jp-prefectures .video-4-9 {
+    left: 475px;
+    top: 330px;
+  }
+  main .container .all .right #jp-prefectures .video-5-1 {
+    left: 187px;
+    top: 315px;
+  }
+  main .container .all .right #jp-prefectures .video-5-2 {
+    left: 168px;
+    top: 336px;
+  }
+  main .container .all .right #jp-prefectures .video-5-3 {
+    left: 150px;
+    top: 353px;
+  }
+  main .container .all .right #jp-prefectures .video-5-4 {
+    left: 226px;
+    top: 332px;
+  }
+  main .container .all .right #jp-prefectures .video-5-5 {
+    left: 302px;
+    top: 542px;
+  }
+  main .container .all .right #jp-prefectures .video-5-6 {
+    left: 277px;
+    top: 567px;
+  }
+  main .container .all .right #jp-prefectures .video-5-7 {
+    left: 255px;
+    top: 592px;
+  }
+  main .container .all .right #jp-prefectures .video-6-1 {
+    left: 50px;
+    top: 209px;
+  }
+  main .container .all .right #jp-prefectures .video-6-2 {
+    left: 395px;
+    top: 435px;
+  }
+  main .container .all .right #jp-prefectures .video-6-3 {
+    left: 393px;
+    top: 365px;
+  }
+  main .container .all .right #jp-prefectures .video-6-4 {
+    left: 368px;
+    top: 390px;
+  }
+  main .container .all .right #jp-prefectures .video-6-5 {
+    left: 343px;
+    top: 415px;
+  }
+  main .container .all .right #jp-prefectures .video-7-1 {
+    left: 90px;
+    top: 355px;
+  }
+  main .container .all .right #jp-prefectures .video-7-2 {
+    left: 68px;
+    top: 381px;
+  }
+  main .container .all .right #jp-prefectures .video-7-3 {
+    left: 182px;
+    top: 610px;
+  }
+  main .container .all .right #jp-prefectures .video-7-4 {
+    left: 157px;
+    top: 635px;
+  }
+  main .container .all .right #jp-prefectures .video-8-1 {
+    left: -3px;
+    top: 255px;
+  }
+  main .container .all .right #jp-prefectures .video-8-2 {
+    left: -24px;
+    top: 268px;
+  }
+  main .container .all .right #jp-prefectures .video-8-3 {
+    left: -35px;
+    top: 282px;
+  }
+  main .container .all .right #jp-prefectures .video-8-4 {
+    left: -13px;
+    top: 224px;
+  }
+  main .container .all .right #jp-prefectures .video-8-5 {
+    left: 263px;
+    top: 482px;
+  }
+  main .container .all .right #jp-prefectures .video-8-6 {
+    left: 238px;
+    top: 507px;
+  }
+  main .container .all .right #jp-prefectures .video-8-7 {
+    left: 213px;
+    top: 532px;
+  }
+  main .container .all .right #jp-prefectures .video-9-1 {
+    left: -38px;
+    top: 426px;
+  }
+  main .container .all .right #jp-prefectures .speech-bubble {
+    height: 20px;
+    width: 33px;
+    padding: 2px;
+  }
+  main .container .all .right #jp-prefectures .speech-bubble a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  main .container .all .right #jp-prefectures .speech-bubble a img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .container .all .right .prefectures {
+    display: none;
+  }
+  main .container #draggable {
+    display: none;
+  }
+  main footer .copyright .ft_sep .stamp-red01 {
+    right: 5%;
+  }
+  main footer .copyright .link-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main footer .copyright a {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */
